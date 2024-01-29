@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*LOGO*/
+
+.logoWrapper {
+  width: 100%;
+  background-color: #EEEEEE;
+}
+
+.logo {
+  width: 1120px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #EEEEEE;
+  margin: 0 auto;
+}
+
+.logoTitle {
+  width: 426px;
+  font-family: 'Vujahday Script';
+  font-size: 46px;
+}
+
+@keyframes goCart {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -700px;
+    /*コマ送り画像の高さ*/
+  }
+}
+
+.shoppingCart {
+  width: 694px;
+  height: 70px;
+  background-image: url('../img/cartGo.png');
+  background-size: 694px 700px;
+  animation: goCart 5s steps(10, end) infinite;
+}
+
+/*HEADER*/
+
+header {
+  background-color: #333333;
+}
+
+.headerMenu {
+  width: 1120px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Noto Serif';
+  list-style: none;
+  margin: 0 auto;
+}
+
+.headerMenu__item {
+  font-family: 'Noto Serif';
+  font-size: 24px;
+  color: #EEEEEE;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: 1s;
+}
+
+.headerMenu__item:hover {
+  color: #d373c0;
+  letter-spacing: 0.15em;
+}
+
+/*MAIN*/
+
+main {
+  width: 100%;
+  display: flex;
+}
+
+/*LEFT*/
+
+.mainColumn {
+  width: 80%;
+  background-color: #EEEEEE;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mainColumnTitle {
+  text-align: center;
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+  text-decoration: underline;
+  margin-top: 64px;
+}
+
+.interview,
+.special {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F4F3F4;
+  border-radius: 10px;
+  margin-top: 64px;
+}
+
+.subscription,
+.issue {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F4F3F4;
+  border-radius: 10px;
+  margin-top: 64px;
+}
+
+.interviewArticle__img,
+.subscriptionArticle__img,
+.specialArticle__img,
+.issueArticle__img {
+  width: 320px;
+  height: 260px;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.interviewArticle,
+.subscriptionArticle,
+.specialArticle,
+.issueArticle {
+  width: 600px;
+  z-index: 1;
+}
+
+.interviewArticle__title,
+.subscriptionArticle__title,
+.specialArticle__title,
+.issueArticle__title {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 24px;
+  text-decoration: underline;
+  letter-spacing: 0.1em;
+}
+
+.interviewArticle__title span {
+  font-size: 16px;
+}
+
+.interviewArticle__text,
+.subscriptionArticle__text,
+.specialArticle__text,
+.issueArticle__text {
+  font-family: 'Noto Serif JP', sans-serif;
+  line-height: 2;
+  margin-top: 16px;
+}
+
+/*丸がボタンに変形する*/
+
+.goTopBtn {
+  /*丸の基点とするためrelativeを指定*/
+  position: relative;
+  margin-left: 220px;
+  /*ボタンの形状*/
+  display: inline-block;
+  color: #333;
+  font-family: 'Noto Serif';
+  line-height: 50px;
+  text-decoration: none;
+  outline: none;
+  padding: 0 0 0 15px;
+}
+
+/* 丸が動く */
+.goTopBtn::before {
+  content: '';
+  /*絶対配置で丸の位置を決める*/
+  position: absolute;
+  left: 0;
+  z-index: -2;
+  /*丸の形状*/
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 25px;
+  /*アニメーションの指定*/
+  transition: .3s ease-out;
+}
+
+/*hoverした際の形状*/
+.goTopBtn:hover::before {
+  width: 120px;
+}
+
+/* 矢印の形状 */
+.goTopBtn::after {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  content: '';
+  top: 1.3em;
+  right: -15px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: rotate(-45deg);
+}
+
+@keyframes playCart {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -160px;
+    /*コマ送り画像の高さ*/
+  }
+}
+
+.shoppingCartAni {
+  width: 800px;
+  height: 80px;
+  display: block;
+  background-image: url('../img/newsCartAni.png');
+  background-size: 800px 160px;
+  animation: playCart 1s steps(2, end) infinite;
+  margin: 0 auto;
+}
+
+/*RIGHT*/
+
+.asideColumn {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #EFE5ED;
+}
+
+.newArticle,
+.popularArticle,
+.companyArticle,
+.link {
+  width: 100%;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+.newArticle__title,
+.popularArticle__title,
+.companyArticle__title,
+.link__title {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+.newArticle__itemWrapper,
+.popularArticle__itemWrapper,
+.companyArticle__itemWrapper,
+.link__itemWrapper {
+  text-align: center;
+  list-style: none;
+}
+
+.newArticle__item,
+.popularArticle__item,
+.companyArticle__item,
+.link__item {
+  display: block;
+  color: #333333;
+  margin-top: 24px;
+}
+
+.shoppingcartPic {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 16px;
+}
+
+.shoppingcartPic img {
+  width: 70px;
+  display: block;
+  margin-top: 64px;
+}
+
+/*フッター*/
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #333333;
+}
+
+.footer__wrapper {
+  width: 1120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.footer__text {
+  color: #fff;
+  font-family: 'Noto Serif';
+  font-size: 20px;
+}

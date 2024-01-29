@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*HEADER*/
+
+header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(210, 190, 190, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.header_wrapper {
+  width: 1120px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+}
+
+.home {
+  color: #333;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.home:hover {
+  color: rgba(247, 93, 139, 1);
+  font-size: 34px;
+  letter-spacing: 0.05em;
+}
+
+main {
+  background-color: #EFE5ED;
+}
+
+/*図形ダイアモンドの指定*/
+.diamond {
+  border-radius: 5px;
+  background-image: linear-gradient(90deg, rgba(247, 93, 139, 1), rgba(254, 220, 64, 1));
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  transform: rotate(45deg);
+  opacity: .5;
+}
+
+.big {
+  width: 360px;
+  height: 360px;
+}
+
+.medium {
+  width: 100px;
+  height: 100px;
+}
+
+.little {
+  width: 50px;
+  height: 50px;
+}
+
+/*図形ダイアモンドここまで*/
+
+/*メインビジュアル*/
+
+.mainVisual {
+  width: 100%;
+  position: relative;
+  padding-top: 70px;
+}
+
+.mvImg_wrapper {
+  width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.mv {
+  width: 33%;
+  display: block;
+  object-fit: cover;
+}
+
+.chathCopy {
+  width: 1120px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  text-align: center;
+  color: #f2dcee;
+  font-family: 'Goblin One';
+  font-size: 48px;
+  text-shadow: 0px 0px 10px rgb(126, 123, 123);
+  transform: translateX(-50%);
+}
+
+/*製品案内コンテンツタイトル*/
+
+.topTitle {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.titleProducts {
+  position: relative;
+  text-align: center;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 48px;
+  text-decoration: underline;
+  margin-top: 128px;
+  margin-bottom: 64px;
+}
+
+.titleProducts span {
+  position: relative;
+  z-index: 2;
+}
+
+.titleProducts::before {
+  content: attr(data-en);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  color: rgba(126, 123, 123, .5);
+  font-family: 'Vujahday Script';
+  font-size: 96px;
+  text-decoration: underline;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/*セクション共通*/
+
+.price,
+.custom,
+.order {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+/*価格セクション*/
+
+.priceImgTop {
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  margin: 0 auto;
+}
+
+.standardPrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceImgLeft,
+.priceImgRight,
+.priceImgBottom {
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.largePrice {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.standardPriceNum,
+.largePriceNum {
+  position: relative;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 48px;
+  text-decoration: underline;
+  margin-top: 128px;
+}
+
+.standardPriceNum span,
+.largePriceNum span {
+  position: relative;
+  z-index: 2;
+}
+
+.standardPriceNum::before {
+  content: attr(data-en);
+  position: absolute;
+  top: -30%;
+  left: -50%;
+  color: rgba(126, 123, 123, .5);
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+  text-decoration: underline;
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.largePriceNum::before {
+  content: attr(data-en);
+  position: absolute;
+  top: -30%;
+  left: 30%;
+  color: rgba(126, 123, 123, .5);
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+  text-decoration: underline;
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.sPriceNotice,.lPriceNotice {
+  font-family: 'Noto Serif JP', sans-serif;
+  margin-top: 16px;
+}
+/*カスタムセクション*/
+
+.customImg_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customImgLeft,
+.customImgCenter,
+.customPriceNote {
+  width: 33%;
+  height: 420px;
+}
+
+.customImg,
+.customColorRightImg {
+  height: 210px;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.customTitle {
+  color: rgba(126, 123, 123, .5);
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+  text-decoration: underline;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-left: 240px;
+}
+
+.customPriceTitle {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 32px;
+  text-decoration: underline;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.customPriceText {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 16px;
+}
+
+.customColorTitle {
+  position: relative;
+  text-align: center;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 48px;
+  text-decoration: underline;
+  margin-bottom: 32px;
+}
+
+.customColorTitle span {
+  position: relative;
+  z-index: 2;
+}
+
+.customColorTitle::before {
+  content: attr(data-en);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgba(126, 123, 123, .5);
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+  text-decoration: underline;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.colorNotice {
+  text-align: center;
+  font-family:  'Noto Serif JP', sans-serif;
+}
+
+.customColor_wrapper,
+.orderTop {
+  display: flex;
+}
+
+/*オーダーセクション*/
+
+.orderNote {
+  margin: 0 auto;
+}
+
+.orderTopImg,
+.orderBottomImg {
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.orderTitle {
+  position: relative;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 48px;
+  text-decoration: underline;
+}
+
+.orderTitle span {
+  position: relative;
+  z-index: 2;
+}
+
+.orderTitle::before {
+  content: attr(data-en);
+  position: absolute;
+  top: -10%;
+  left: -25%;
+  color: rgba(126, 123, 123, .5);
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+  text-decoration: underline;
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.orderPrice {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 48px;
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+
+.priceOff10 {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.priceOff30 {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.orderBottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*== グラデーション線から塗に変化する */
+
+.orderLink {
+  /*ボタンの形状*/
+  display: inline-block;
+  border: 1px solid #fa6c9f;
+  border-radius: 30px;
+  color: #fa6c9f;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+  outline: none;
+  padding: 18px 60px;
+  /*アニメーションの指定*/
+  transition: all 0.4s ease-out;
+}
+
+/*hoverした際、グラデーションと影を付ける*/
+.orderLink:hover {
+  /*ボタンの形状*/
+  border-color: transparent;
+  color: #fff;
+  /*背景の色と形状*/
+  background: linear-gradient(270deg, #fa6c9f 0%, #ffe140 50%, #ff357f 100%);
+  background-size: 200% auto;
+  background-position: right center;
+  /*ボックスの影*/
+  box-shadow: 0 5px 10px rgb(250, 108, 159, 0.4);
+}
+
+/*FOOTER*/
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #333333;
+}
+
+.footer__wrapper {
+  width: 1120px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer__text {
+  color: #fff;
+  font-family: 'Noto Serif';
+  font-size: 20px;
+}

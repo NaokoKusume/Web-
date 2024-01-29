@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(210, 190, 190, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.headerWrapper {
+  width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: 'Vujahday Script';
+  font-size: 48px;
+}
+
+.menu {
+  color: #333333;
+  font-family: 'Noto Serif';
+  font-size: 24px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.menu:hover {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.headerMenu {
+  font-family: 'Noto Serif JP', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  padding: 50px;
+}
+
+.headerMenu li:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.headerMenu__item {
+  color: #EEEEEE;
+  font-size: 20px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.headerMenu__item:hover {
+  color: #f3984e;
+  letter-spacing: 0.1em;
+}
+
+nav {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333333;
+  transform: translateX(100%);
+  transition: .3s;
+  z-index: 10;
+}
+
+nav.active {
+  transform: translateX(0);
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .3);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  z-index: 9;
+}
+
+.mask.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+main {
+  width: 100%;
+  background-image: url(../img/supportBc.png);
+  font-family: 'Noto Serif JP', sans-serif;
+  padding: 120px 0;
+}
+
+.mainTitle {
+  width: 20%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .8);
+  text-align: center;
+  text-decoration: underline;
+  margin: 0 auto;
+}
+
+.order,
+.support,
+.company {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 64px;
+  margin-bottom: 32px;
+}
+
+/*アコーディオン全体*/
+.accordion-area {
+  width: 96%;
+  max-width: 900px;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.accordion-area li {
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.accordion-area section {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;
+  /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after {
+  content: '';
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  background-color: #333;
+}
+
+.title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
+}
+
+.title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close::before {
+  transform: rotate(45deg);
+}
+
+.title.close::after {
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+  display: none;
+  /*はじめは非表示*/
+  background: #f3f3f3;
+  border-radius: 10px;
+  margin: 0 3% 3% 3%;
+  padding: 3%;
+}
+
+/*footer*/
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #333333;
+}
+
+.footer__wrapper {
+  width: 1120px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer__text {
+  color: #fff;
+  font-family: 'Noto Serif';
+  font-size: 20px;
+}

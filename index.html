@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoppingCartCampany</title>
+  <!--css-->
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!--js-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/jquery.bgswitcher.js"></script>
+  <script src="./js/script.js" defer></script>
+  <!--font-->
+  <link href='https://fonts.googleapis.com/css?family=Vujahday Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Goblin One' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <div class="header__wrapper">
+      <span class="header__logo">ShoppingCartCompany</span>
+      <ul class="headerMenu">
+        <li class="headerMenu__item"><a href="#newsSection">NEWS</a></li>
+        <li class="headerMenu__item"><a href="#companySection">COMPANY</a></li>
+        <li class="headerMenu__item"><a href="#serviceSection">SERVICE</a></li>
+        <li class="headerMenu__item"><a href="#eventSection">EVENT</a></li>
+        <li class="headerMenu__item"><a href="#contactSection">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!--TOP画面-->
+    <div class="topContainer">
+      <div class="mainvisual__slider">
+        <div class="mainvisual"><img src="./img/mv0.jpg" alt=""></div>
+        <div class="mainvisual"><img src="./img/mv1.jpg" alt=""></div>
+        <div class="mainvisual"><img src="./img/mv2.jpg" alt=""></div>
+        <div class="mainvisual"><img src="./img/mv3.jpg" alt=""></div>
+        <div class="mainvisual"><img src="./img/mv4.jpg" alt=""></div>
+        <div class="mainvisual"><img src="./img/mv5.jpg" alt=""></div>
+      </div>
+      <div class="gradationMask"></div>
+      <div class="catchCopy__wrapper">
+        <span class="catchCopy">ShoppingCartが</span>
+        <sapn class="catchCopy">あるということ</sapn>
+        <p class="subPhrase">～買い物かごを持たないでお買い物～</p>
+      </div>
+    </div>
+    <!--NEWS_CONTENTS-->
+    <section id="newsSection" class="newsSection">
+      <div class="newsContainer">
+        <hgroup class="newsTitle__wrapper">
+          <h2 class="newsTitle">NEWS</h2>
+          <p class="newsSubTitle">お知らせ</p>
+        </hgroup>
+        <section class="newsItem__wrapper">
+          <article class="newsItem">
+            <img class="newsItem__img" src="./img/news1.jpg" alt="">
+            <h6 class="newsItem__title">カート無しのパパにインタビュー</h6>
+            <p class="newsItem__text">
+              今回はショッピングカートを持たずにお買い物をされていた男性にインタビューをしました。最近お子さんも生まれて大変なママの為にお買い物に来たそうですが、肝心のショッピングカートを忘れて来てしまいました。
+            </p>
+            <a class="articleLink" href="contents/news.html#interview">READ MORE</a>
+          </article>
+          <article class="newsItem">
+            <img class="newsItem__img" src="./img/news2.jpg" alt="">
+            <h6 class="newsItem__title">カートクリーニング始めました</h6>
+            <p class="newsItem__text">
+              いつも清潔で美しいカートをご利用いただきたくクリーニング・メンテナンスサービスを始めました！また、様々な種類のカートをお試しいただけるサブスクリプションサービスも行っております。
+            </p>
+            <a class="articleLink" href="contents/news.html#subscription">READ MORE</a>
+          </article>
+          <article class="newsItem">
+            <img class="newsItem__img" src="./img/news3.jpg" alt="">
+            <h6 class="newsItem__title">お子様サイズのカート発売中</h6>
+            <p class="newsItem__text">小さなお子様でも押しやすい軽くて丈夫なショッピングカートを作りました。
+              色は赤、青、黄、緑の四種類。
+              さらに期間限定でクリスマス限定カラーも販売しております。
+            </p>
+            <a class="articleLink" href="contents/news.html#special">READ MORE</a>
+          </article>
+          <article class="newsItem">
+            <img class="newsItem__img" src="./img/news4.jpg" alt="">
+            <h6 class="newsItem__title">路上の置きカート問題について</h6>
+            <p class="newsItem__text">楽しいショッピングの後についついそのまま置きがちなショッピングカートですが、路上のコンディションによっては非常に危険です。
+              過去に起きた事例や注意点などをまとめました。
+            </p>
+            <a class="articleLink" href="contents/news.html#issue">READ MORE</a>
+          </article>
+        </section>
+      </div>
+    </section>
+    <!--COMPANY_CONTENTS-->
+    <section id="companySection" class="companySection">
+      <div class="companyContainer">
+        <div class="companyTitle__wrapperBox">
+          <hgroup class="companyTitle__wrapper">
+            <h2 class="companyTitle">COMPANY</h2>
+            <p class="companySubTitle">会社概要</p>
+          </hgroup>
+        </div>
+        <div class="companyArticle__wrapper">
+          <div class="companySection__img"><img src="img/companySectionImg.jpg" alt=""></div>
+          <article class="companyArticle">
+            <h3 class="companyArticle__title">ShoppingCartCampany高知</h3>
+            <p class="companyArticle__text">ショッピングカートの発案者シルヴァン・ゴールドマンの意志を継ぎ、より便利で快適そして何より楽しいお買い物をしていただきたく創業いたしました。
+              日本の職人の高い技術力を生かして多種多様なニーズに合わせた商品を展開しております。<br>
+              社員一同ショッピングカートが大好きです！！！<br>
+              お買い物の際には是非、ショッピングカートを押してみてください。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!--SERVICE_CONTENTS-->
+    <section id="serviceSection" class="serviceSection">
+      <div class="serviceContainer">
+        <hgroup class="serviceTitle__wrapper">
+          <h2 class="serviceTitle">SERVICE</h2>
+          <p class="serviceSubTitle">サービス</p>
+        </hgroup>
+      </div>
+      <div class="serviceImg__slider">
+        <div class="serviceImg"><img src="./img/service1.jpg" alt=""></div>
+        <div class="serviceImg"><img src="./img/service2.jpg" alt=""></div>
+        <div class="serviceImg"><img src="./img/service3.jpg" alt=""></div>
+        <div class="serviceImg"><img src="./img/service4.jpg" alt=""></div>
+        <div class="serviceImg"><img src="./img/service5.jpg" alt=""></div>
+        <div class="serviceImg"><img src="./img/service6.jpg" alt=""></div>
+      </div>
+    </section>
+    <!--EVENT_CONTENTS-->
+    <section id="eventSection" class="eventSection">
+      <div class="eventContainer">
+        <hgroup class="eventTitle__wrapper">
+          <h2 class="eventTitle">EVENT</h2>
+          <p class="eventSubTitle">イベント</p>
+        </hgroup>
+        <p class="event__text">【ノリノリでショッピングカートに乗ろう！２０２３】
+        </p>
+        <div class="eventImg__wrapper">
+          <img class="eventImg" src="./img/event1.jpg" alt="">
+          <img class="eventImg" src="./img/event2.jpg" alt="">
+          <img class="eventImg" src="./img/event3.jpg" alt="">
+          <img class="eventImg" src="./img/event4.jpg" alt="">
+          <img class="eventImg" src="./img/event5.jpg" alt="">
+          <img class="eventImg" src="./img/event6.jpg" alt="">
+          <img class="eventImg" src="./img/event7.jpg" alt="">
+          <img class="eventImg" src="./img/event8.jpg" alt="">
+          <img class="eventImg" src="./img/event9.jpg" alt="">
+          <img class="eventImg" src="./img/event10.jpg" alt="">
+          <img class="eventImg" src="./img/event11.jpg" alt="">
+          <img class="eventImg" src="./img/event12.jpg" alt="">
+        </div>
+      </div>
+    </section>
+    <!--CONTACT_CONTENTS-->
+    <section id="contactSection" class="contactSection">
+      <div class="contactContainer">
+        <div class="contactWrapper">
+          <hgroup class="contactTitle__wrapper">
+            <h2 class="contactTitle">CONTACT</h2>
+            <p class="contactSubTitle">お問い合わせ</p>
+          </hgroup>
+          <form class="contactItem__wrapper">
+            <div class="contactItem">
+              <label class="contactName">氏名</label>
+              <input class="contactName__field" type="text" placeholder="ヤマダタロウ">
+            </div>
+            <div class="contactItem">
+              <label class="contactMail">メールアドレス</label>
+              <input class="contactMail__field" type="text" placeholder="メールアドレス">
+            </div>
+            <div class="contactItem">
+              <label class="contactTell">電話番号</label>
+              <input class="contactTell__field" type="text" placeholder="000-0000-0000">
+            </div>
+            <div class="contactItem">
+              <label class="contactMessage">内容</label>
+              <textarea class="contactMessage__field" placeholder="お問い合わせ内容"></textarea>
+            </div>
+            <div class="contactBtn__wrapper">
+              <input class="contactBtn" type="submit" value="送信">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+<!--footer-->
+  <footer>
+    <div class="footer__wrapper">
+      <ul class="footerMenu">
+        <li class="footerMenu__item"><a href="contents/about.html"><span>こちらのサイトについて</span>サイト案内</a></li>
+        <li class="footerMenu__item"><a href="contents/products.html"><span>Parallax</span>製品情報</a></li>
+        <li class="footerMenu__item"><a href="contents/support.html"><span>アコーディオンメニュー</span>サポート</a></li>
+        <li class="footerMenu__item"><a href="contents/recruit.html"><span>GSAP</span>採用情報</a></li>
+        <li class="footerMenu__item"><a href="#header"><span>Scroll</span>TOP画面</a></li>
+      </ul>
+      <P class="footer__text">ⓒ2023manabiya-sakura</P>
+    </div>
+  </footer>
+
+</body>
+
+</html>
